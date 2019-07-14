@@ -7,9 +7,9 @@
 -->
 <config>
     <modules>
-        <phpwebstudio_sizechart>
+        <Phpwebstudio_Sizechart>
             <active>true</active>
             <codePool>local</codePool>
-        </phpwebstudio_sizechart>
+        </Phpwebstudio_Sizechart>
     </modules>
 </config>

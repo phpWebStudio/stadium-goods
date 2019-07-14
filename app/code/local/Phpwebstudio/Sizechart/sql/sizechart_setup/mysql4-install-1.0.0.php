@@ -10,9 +10,7 @@
 $installer = $this;
 $installer->startSetup();
 
-$setup = new Mage_Eav_Model_Entity_Setup('core_setup');
-
-$setup->addAttribute('catalog_product', 'gender', array(
+$installer->addAttribute('catalog_product', 'gender', array(
     'type'              => 'varchar',
     'backend'           => '',
     'frontend'          => '',
@@ -22,7 +20,7 @@ $setup->addAttribute('catalog_product', 'gender', array(
     'class'             => '',
     'source'            => '',
     'global'            => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_GLOBAL,
-    'visible'           => false,
+    'visible'           => true,
     'required'          => false,
     'user_defined'      => true,
     'default'           => '',
@@ -37,7 +35,7 @@ $setup->addAttribute('catalog_product', 'gender', array(
     'is_used_for_promo_rules' => true
 ));
 
-$setup->addAttribute('catalog_product', 'size_chart', array(
+$installer->addAttribute('catalog_product', 'size_chart', array(
     'type'              => 'varchar',
     'backend'           => '',
     'frontend'          => '',
@@ -47,14 +45,14 @@ $setup->addAttribute('catalog_product', 'size_chart', array(
     'class'             => '',
     'source'            => '',
     'global'            => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_GLOBAL,
-    'visible'           => false,
+    'visible'           => true,
     'required'          => false,
     'user_defined'      => true,
     'default'           => '',
     'searchable'        => true,
     'filterable'        => false,
     'comparable'        => false,
-    'visible_on_front'  => false,
+    'visible_on_front'  => true,
     'used_in_product_listing' => true,
     'unique'            => false,
     'apply_to'             => array('simple', 'configurable'),
