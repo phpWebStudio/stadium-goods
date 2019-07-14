@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+- - Created by   : Dmitry Shirokovskiy.
+- - Email        : info@phpwebstudio.com
+- - Created at   : 14.07.19, 21:32
+- - Description  :
+-->
+<config>
+    <modules>
+        <Phpwebstudio_Sizechart>
+            <version>1.0.0</version>
+        </Phpwebstudio_Sizechart>
+    </modules>
+
+    <frontend>
+        <layout>
+            <updates>
+                <phpwebstudio_sizechart>
+                    <file>phpwebstudio_sizechart.xml</file>
+                </phpwebstudio_sizechart>
+            </updates>
+        </layout>
+    </frontend>
+
+    <models>
+        <sizechart>
+            <class>Phpwebstudio_Sizechart_Model</class>
+            <resourceModel>sizechart_resource</resourceModel>
+        </sizechart>
+    </models>
+
+    <resources>
+        <sizechart_setup>
+            <setup>
+                <module>Phpwebstudio_Sizechart</module>
+<!--                <class>Phpwebstudio_Sizechart_Model_Mysql4_Setup</class>-->
+            </setup>
+            <connection>
+                <use>core_setup</use>
+            </connection>
+        </sizechart_setup>
+        <sizechart_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </sizechart_write>
+        <sizechart_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </sizechart_read>
+    </resources>
+
+    <global>
+        <events>
+            <catalog_product_save_after>
+                <observers>
+                    <sizechart_updater>
+                        <class>sizechart/observer</class>
+                        <method>updateSizechart</method>
+                    </sizechart_updater>
+                </observers>
+            </catalog_product_save_after>
+        </events>
+    </global>
+</config>
