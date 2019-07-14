@@ -30,7 +30,7 @@ $installer->addAttribute('catalog_product', 'gender', array(
     'visible_on_front'  => false,
     'used_in_product_listing' => true,
     'unique'            => false,
-    'apply_to'          => array('simple', 'configurable'),
+    'apply_to'          => 'simple,configurable',
     'is_configurable'   => false,
     'is_used_for_promo_rules' => true
 ));
@@ -55,7 +55,7 @@ $installer->addAttribute('catalog_product', 'size_chart', array(
     'visible_on_front'  => true,
     'used_in_product_listing' => true,
     'unique'            => false,
-    'apply_to'             => array('simple', 'configurable'),
+    'apply_to'          => 'simple,configurable',
     'is_configurable'   => false,
     'is_used_for_promo_rules' => true
 ));
