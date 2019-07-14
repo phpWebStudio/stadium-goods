@@ -31,10 +31,12 @@ class Phpwebstudio_Sizechart_Model_Observer
                     $product->setSizeChart("FR");
                     break;
 
-                default: break;
+                default:
+                    // If no Gender, we could reset Size Chart here (if we need it)
+                    break;
             }
 
-            Mage::log("Gender = " . $product->getGender(), null, 'my-log.txt', true);
+            Mage::log("Gender = " . $product->getGender(), null, 'product.observer.log', true);
         }
     }
 }
